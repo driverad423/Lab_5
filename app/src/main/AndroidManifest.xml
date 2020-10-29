@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="view.StatisticsActivity"></activity>
+        <service
+            android:name="presenter.RankingService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name="view.StatisticsActivity" />
 
         <receiver
             android:name="presenter.LocationBroadcastReceiver"
